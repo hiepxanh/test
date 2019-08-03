@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+     <ion-buttons slot="start">
+      <ion-back-button icon="ios-arrow-back"></ion-back-button>
+    </ion-buttons>
+    <ion-title>person</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="user$ | async as user">
+  <ion-item>
+    <ion-avatar slot="start">
+      <img src="{{user.avatar_url}}">
+    </ion-avatar>
+    <ion-label>
+      <h2>{{user.name}}</h2>
+      <p>{{user.location}}</p>
+    </ion-label>
+  </ion-item>
+
+</ion-content>
