@@ -12,7 +12,7 @@ export class PersonPage implements OnInit {
   constructor(
     public ghService: GHService,
     private route: ActivatedRoute
-  ) { 
+  ) {
     this.user$ = this.route.paramMap.pipe(
     switchMap((params: ParamMap) =>
       this.ghService.getUser(params.get('id')))
